@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="fav.png">
+  <title>The Destiny Terminal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
+    <div class="flex justify-between items-center px-8 py-5">
+      <h1 class="text-2xl font-bold tracking-widest">The Destiny Terminal</h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 text-lg">
+        <a href="projects.html" class="hover:text-gray-400">Projects</a>
+        <a href="merchandise.html" class="hover:text-gray-400">Merchandise</a>
+        <a href="about.html" class="hover:text-gray-400">About Us</a>
+        <a href="contact.html" class="hover:text-gray-400">Contact</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex flex-col bg-black border-t border-gray-800 md:hidden">
+      <a href="#" class="py-4 text-center border-b border-gray-800 hover:bg-gray-900">Projects</a>
+      <a href="#" class="py-4 text-center border-b border-gray-800 hover:bg-gray-900">Merchandise</a>
+      <a href="#" class="py-4 text-center border-b border-gray-800 hover:bg-gray-900">About Us</a>
+      <a href="#" class="py-4 text-center hover:bg-gray-900">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Video -->
+  <section class="pt-[70px] relative">
+    <video class="w-full h-screen object-contain bg-black" autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Quote -->
+    <div class="absolute bottom-10 right-10 bg-black/60 p-6 rounded-lg backdrop-blur-sm max-w-xs">
+      <p class="text-2xl italic font-light"><b>"Enter the Terminal — leave your mind behind."</b></p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-24 px-10 max-w-5xl mx-auto">
+    <h2 class="text-4xl font-semibold mb-6">About The Destiny Terminal</h2>
+    <p class="text-gray-300 text-lg leading-relaxed">
+      The Destiny Terminal is an indie game development studio that merges art, emotion, and technology.  
+      We craft experiences that pull players beyond reality — into worlds where memories fade, choices echo,  
+      and every moment feels disturbingly alive.
+    </p>
+  </section>
+
+
+  <!-- Merchandise -->
+  <section class="py-20 px-10 text-center">
+    <h2 class="text-4xl font-semibold mb-6">Official Merchandise</h2>
+    <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+      Bring the madness home — explore official apparel, collectibles, and digital art drops inspired by our games.
+    </p>
+    <a href="merchandise.html" class="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition">Shop Now</a>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-20 px-10 bg-gray-900 text-center">
+    <h2 class="text-4xl font-semibold mb-6">Contact Us</h2>
+    <p class="text-gray-400 mb-6">For collaborations, partnerships, or press inquiries — reach out.</p>
+    <a href="mailto:contact@thedestinyterminal.com" class="text-lg underline hover:text-gray-300">contact@thedestinyterminal.com</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+    © 2025 The Destiny Terminal. All rights reserved.
+  </footer>
+
+  <!-- JS for mobile menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
